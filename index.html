@@ -8,10 +8,16 @@
   <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: dark)">
   <title>微信小店</title>
   <!-- 自动跳转到微信小店外部链接 -->
-  <meta http-equiv="refresh" content="0; url=https://store.weixin.qq.com/shop/a/TqgAmniGLwblPAb">
   <script>
-    // 兼容性跳转
-    window.location.href = 'https://store.weixin.qq.com/shop/a/TqgAmniGLwblPAb';
+    // 判断是否在微信内置浏览器
+    function isWeixinBrowser() {
+      return /micromessenger/i.test(navigator.userAgent);
+    }
+    if (isWeixinBrowser()) {
+      window.location.href = 'https://work.weixin.qq.com/ca/cawcde1b1ec6a7aed8';
+    } else {
+      window.location.href = 'https://store.weixin.qq.com/shop/a/TqgAmniGLwblPAb';
+    }
   </script>
   <style>
     body { font-family: sans-serif; background: #f7f7f7; margin: 0; padding: 0; }
