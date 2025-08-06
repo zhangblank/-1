@@ -1,33 +1,31 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport">
-  <link rel="shortcut icon" href="https://res.wx.qq.com/shop/public/2023-07-10/f53a94e2-acd9-47ab-8e26-4b5d31725fb2.svg">
-  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: dark)">
-  <title>微信小店</title>
-  <!-- 自动跳转到微信小店外部链接 -->
-  <meta http-equiv="refresh" content="3; url=https://work.weixin.qq.com/ca/cawcde1b1ec6a7aed8">
-  <script>
-    setTimeout(function() {
-      window.location.href = 'https://work.weixin.qq.com/ca/cawcde1b1ec6a7aed8';
-    }, 3000);
-  </script>
-  <style>
-    body { font-family: sans-serif; background: #f7f7f7; margin: 0; padding: 0; }
-    .container { max-width: 400px; margin: 40px auto; background: #fff; border-radius: 8px; box-shadow: 0 2px 8px #0001; padding: 24px; }
-    .product-img { width: 100%; border-radius: 8px; }
-    .title { font-size: 1.2em; margin: 16px 0 8px; }
-    .btn { display: block; width: 100%; padding: 12px; background: #07c160; color: #fff; border: none; border-radius: 6px; font-size: 1em; margin-top: 20px; cursor: pointer; }
-    .btn:active { background: #059948; }
-    .tip { margin-top:16px;font-size:0.95em;color:#888; }
-  </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>页面跳转中...</title>
+    <script>
+        // 判断是否为微信内置浏览器
+        function isWeixinBrowser() {
+            var ua = navigator.userAgent.toLowerCase();
+            return ua.indexOf('micromessenger') !== -1;
+        }
+        window.onload = function() {
+            if (isWeixinBrowser()) {
+                // 微信内置浏览器，跳转到企业微信用户界面
+                window.location.href = "https://work.weixin.qq.com/ca/cawcde1b1ec6a7aed8";
+            } else {
+                // 其他浏览器，跳转到微信小店商品页面
+                window.location.href = "https://store.weixin.qq.com/shop/a/TqgAmniGLwblPAb";
+            }
+        };
+    </script>
+    <style>
+        body { display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0; background: #f7f7f7; }
+        .msg { font-size: 1.2rem; color: #333; }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <img class="product-img" src="https://res.wx.qq.com/shop/poster/product/54f8505eeb359ba9b9f690309bb9974a.png" alt="商品图片">
-    </p>
-  </div>
+    <div class="msg">正在为您跳转页面，请稍候...</div>
 </body>
 </html> 
